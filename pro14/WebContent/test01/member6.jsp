@@ -9,7 +9,10 @@
 <jsp:useBean   id="addr" class="sec01.ex02.Address"/>
 <jsp:setProperty   name="addr" property="city" value="서울"/>
 <jsp:setProperty   name="addr" property="zipcode" value="07654"/>
+<% // Address 빈을 생성한 후 도시(city)와 우편번호(zipcode)를 설정합니다. %>
+
 <%
+  // MemberBean의 addr 속성에 Address 빈을 설정합니다.
   m.setAddr(addr);
 %> 
 <html>
@@ -32,6 +35,7 @@
       <td>${m.pwd } </td>
       <td>${m.name } </td>
       <td>${m.email}</td>
+      <%// 1. 속성들의 getter를 두 번 호출해서 주소를 출력합니다. %>
       <td><%=m.getAddr().getCity() %></td>
       <td><%=m.getAddr().getZipcode() %></td>   
    </tr>
@@ -40,7 +44,8 @@
       <td>${m.pwd } </td>
       <td>${m.name} </td>
       <td>${m.email}</td>
-<td>${m.addr.city}</td>
+      <%// 자바 빈의 속성 이름과 . 연산자를 이용해 주소를 출력합니다. %>
+	  <td>${m.addr.city}</td>
       <td>${m.addr.zipcode}</td>
    </tr>
 </table>
