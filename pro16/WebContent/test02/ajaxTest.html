@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+$.ajax({
+	type: "post 또는 get",
+	async: "true" 또는 "false",
+	url: "요청할 URL",
+	data: {서버로 전송할 데이터},
+	dataType: "서버에서 전송받을 데이터형식",
+	success:{
+		//정상 요청, 응답 시 처리
+	},
+	error: function(xhr, status, error){
+		//오류 발생 시 처리
+	},
+	complete: function(data, textStatus){
+		//작업 완료 후 처리
+	}
+});
+</script>
+</head>
+<body>
+
+</body>
+</html>
