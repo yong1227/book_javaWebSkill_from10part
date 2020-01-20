@@ -25,8 +25,9 @@
 				// 새 글을 등록하는 메서드를 호출합니다.
 				//url : "${contextPath}/boards",
 				// 글 번호 114번에 대해 수정을 요청합니다.
-				type: "PUT",
-				url : "${contextPath}/boards/114",
+				//type: "PUT",
+				type: "DELETE",
+				url : "${contextPath}/boards/1227",
 				contentType: "application/json",
 				//  글 정보를 JSON 형식으로 전송합니다.
 				data: JSON.stringify(article),
@@ -44,7 +45,8 @@
 </script>
 </head>
 <body>
-	<input type="button" id="checkJson" value="새글 쓰기"/><br><br>
+	여기는 JSONTest2 페이지 입니다.
+	<input type="button" id="checkJson" value="삭제하기"/><br><br>
 	<div id="output"></div>
 </body>
 </html>

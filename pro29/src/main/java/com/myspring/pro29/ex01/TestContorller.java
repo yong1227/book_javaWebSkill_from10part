@@ -25,7 +25,7 @@ public class TestContorller {
 	// hello 요청 시 브라우저로 문자열을 전송합니다.
 	@RequestMapping("/hello")
 	public String hello() {
-		return "Hello REST!!";
+		return "JSONTest2";
 	}
 	
 	// MemberVO 객체의 속성 값을 저장한 후 JSON으로 전송합니다.
